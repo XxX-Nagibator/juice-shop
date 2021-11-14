@@ -1,6 +1,8 @@
+name: GoGoPowerRangers
+on: workflow_dispatch
+
+jobs:
   heroku:
-    if: github.repository == 'juice-shop/juice-shop' && github.event_name == 'push' && (github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/master')
-    needs: [test, e2e]
     runs-on: ubuntu-latest
     steps:
       - name: "Check out Git repository"
