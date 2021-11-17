@@ -19,10 +19,11 @@ jobs:
             p/secrets
             p/typescript
             p/javascript
-
+      
         # Upload findings to GitHub Advanced Security Dashboard [step 1/2]
         # See also the next step.
           generateSarif: "1"
+          SEMGREP_TIMEOUT: 1000
 
       # Upload findings to GitHub Advanced Security Dashboard [step 2/2]
       - name: Upload SARIF file for GitHub Advanced Security Dashboard
